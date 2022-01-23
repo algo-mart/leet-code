@@ -1,4 +1,4 @@
-package main
+package toptal
 
 import (
 	"fmt"
@@ -10,13 +10,13 @@ import (
 func Solution(message string, K int) string {
 	var result string
 	var i int
-	temp:= ""
+	temp := ""
 	arr := strings.Split(message, "")
 	myMap := make(map[string]bool)
 	for _, s := range arr {
 		myMap[s] = true
 	}
-	for i = 0; i<len(message) && i < K; i++ {
+	for i = 0; i < len(message) && i < K; i++ {
 		temp += string(message[i])
 		if string(message[i]) == (" ") || myMap[temp] {
 			result += temp
